@@ -1,63 +1,344 @@
-<nav>
-  <a href="index.html">Home</a> |
-  <a href="about.html">About</a> |
-  <a href="projects.html">Projects</a> |
-  <a href="cv.html">CV</a> |
-  <a href="contact.html">Contact</a>
-</nav>
-<hr>
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Himanshu Hani</title>
-  <link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himanshu | Mathematics Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: #f8fafc;
+        }
+        .section-divider {
+            border-color: #1e293b;
+        }
+        .card-bg {
+            background-color: #1e293b;
+            border-left: 4px solid #3b82f6;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: translateY(-5px);
+        }
+    </style>
 </head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-slate-900/80 backdrop-blur-md fixed w-full z-50 border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-blue-400">Himanshu</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-slate-300 hover:text-blue-400 transition">About</a>
+                    <a href="#research" class="text-slate-300 hover:text-blue-400 transition">Research</a>
+                    <a href="#experience" class="text-slate-300 hover:text-blue-400 transition">Experience</a>
+                    <a href="#skills" class="text-slate-300 hover:text-blue-400 transition">Skills</a>
+                    <a href="#contact" class="text-slate-300 hover:text-blue-400 transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-toggle" class="text-slate-300 hover:text-blue-400">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-<body>
-  <header>
-    <h1>Himanshu Hani</h1>
-    <p class="subtitle">Mathematics Undergraduate at IISER Mohali</p>
-    <p class="subtitle">Research in Sobolev Spaces, Geometric Measure Theory, Calculus of Variations & PDEs</p>
-  </header>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-slate-900/95 z-40 pt-20">
+        <div class="flex flex-col items-center space-y-8 text-xl">
+            <a href="#about" class="text-slate-300 hover:text-blue-400 transition">About</a>
+            <a href="#research" class="text-slate-300 hover:text-blue-400 transition">Research</a>
+            <a href="#experience" class="text-slate-300 hover:text-blue-400 transition">Experience</a>
+            <a href="#skills" class="text-slate-300 hover:text-blue-400 transition">Skills</a>
+            <a href="#contact" class="text-slate-300 hover:text-blue-400 transition">Contact</a>
+        </div>
+    </div>
 
-  <main>
-    <section>
-      <h2>Current Research</h2>
-      <p>
-        Currently working under <strong>Dr. Cosmin Burtea</strong> (Université Paris Cité, France) on nonlinear PDEs, Hamilton–Jacobi equations, conservation laws, and Riemann problems.
-      </p>
-      <p>
-        Simultaneously collaborating with <strong>Dr. Debabrata Karmakar</strong> at TIFR CAM, Bangalore, focusing on Sobolev spaces, Geometric Measure Theory, Calculus of Variations, Elliptic PDEs, and Fourier Analysis.
-      </p>
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Himanshu</h1>
+                <h2 class="text-2xl md:text-3xl text-blue-400 mb-6">Mathematics Researcher</h2>
+                <p class="text-lg text-slate-300 mb-8">
+                    BS-MS Dual Degree (Mathematics) at IISER Mohali<br>
+                    Passionate about Functional Analysis, PDEs, and Sobolev Spaces
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition">Contact Me</a>
+                    <a href="#" class="border border-blue-400 text-blue-400 hover:bg-blue-400/10 px-6 py-3 rounded-lg transition">Download CV</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
+                <div class="relative">
+                    <div class="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full overflow-hidden">
+                        <img src="http://static.photos/technology/640x360/42" alt="Profile" class="w-full h-full object-cover opacity-90">
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 bg-slate-800 px-4 py-2 rounded-lg border border-slate-700 shadow-lg">
+                        <span class="text-blue-400">IISER Mohali</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section>
-      <h2>Previous Work</h2>
-      <p>
-        In Summer 2024, worked under <strong>Dr. Debajyoti Chaudhuri</strong> (IIT Bhubaneswar) in Functional Analysis. This laid the foundational background for the current work in PDEs and advanced analysis.
-      </p>
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto border-t border-slate-800">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4" data-aos="fade-up">About Me</h2>
+            <div class="w-20 h-1 bg-blue-500 mx-auto mb-8" data-aos="fade-up"></div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12">
+            <div data-aos="fade-right">
+                <h3 class="text-2xl font-bold mb-6">Academic Background</h3>
+                <p class="text-slate-300 mb-6">
+                    I'm a 3rd year BS-MS Dual Degree student majoring in Mathematics at the Indian Institute of Science Education and Research (IISER) Mohali, with a strong foundation in Physics.
+                </p>
+                <p class="text-slate-300 mb-6">
+                    My academic journey has been driven by a deep fascination with abstract mathematical concepts and their applications in understanding physical phenomena.
+                </p>
+                <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
+                    <h4 class="text-xl font-bold mb-4 text-blue-400">Current Focus</h4>
+                    <p class="text-slate-300">
+                        Preparing for graduate studies in pure mathematics with specialization in Partial Differential Equations and Functional Analysis.
+                    </p>
+                </div>
+            </div>
+            <div data-aos="fade-left">
+                <h3 class="text-2xl font-bold mb-6">Research Philosophy</h3>
+                <p class="text-slate-300 mb-6">
+                    I believe in the power of rigorous mathematical analysis to uncover fundamental truths about our universe. My approach combines abstract theory with practical problem-solving.
+                </p>
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="bg-blue-600/20 p-2 rounded-full mr-4">
+                            <i data-feather="target" class="text-blue-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">Interdisciplinary Approach</h4>
+                            <p class="text-slate-400 text-sm">
+                                Bridging mathematics and physics to solve complex problems
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-blue-600/20 p-2 rounded-full mr-4">
+                            <i data-feather="book" class="text-blue-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">Theoretical Rigor</h4>
+                            <p class="text-slate-400 text-sm">
+                                Commitment to precise definitions and proofs
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-blue-600/20 p-2 rounded-full mr-4">
+                            <i data-feather="share-2" class="text-blue-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">Collaborative Spirit</h4>
+                            <p class="text-slate-400 text-sm">
+                                Valuing diverse perspectives in mathematical research
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section>
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:ms23137@iisermohali.ac.in">ms23137@iisermohali.ac.in</a></p>
-      <p>GitHub: <a href="https://github.com/Himanshu-Hani" target="_blank">Himanshu-Hani</a></p>
+    <!-- Research Interests -->
+    <section id="research" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-slate-900/50">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4" data-aos="fade-up">Research Interests</h2>
+            <div class="w-20 h-1 bg-blue-500 mx-auto mb-8" data-aos="fade-up"></div>
+            <p class="max-w-2xl mx-auto text-slate-300" data-aos="fade-up">
+                My research focuses on the intersection of functional analysis and partial differential equations, with particular emphasis on Sobolev spaces and variational methods.
+            </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="card-bg p-8 rounded-lg hover-scale" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-blue-600/20 w-12 h-12 rounded-full flex items-center justify-center mb-6">
+                    <i data-feather="cpu" class="text-blue-400"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Functional Analysis</h3>
+                <p class="text-slate-300">
+                    Hilbert/Banach spaces, operator theory, spectral theory, and their applications in PDEs.
+                </p>
+            </div>
+            <div class="card-bg p-8 rounded-lg hover-scale" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-blue-600/20 w-12 h-12 rounded-full flex items-center justify-center mb-6">
+                    <i data-feather="layers" class="text-blue-400"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Partial Differential Equations</h3>
+                <p class="text-slate-300">
+                    Elliptic, hyperbolic, and Hamilton-Jacobi equations with focus on existence and regularity.
+                </p>
+            </div>
+            <div class="card-bg p-8 rounded-lg hover-scale" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-blue-600/20 w-12 h-12 rounded-full flex items-center justify-center mb-6">
+                    <i data-feather="codepen" class="text-blue-400"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Sobolev Spaces</h3>
+                <p class="text-slate-300">
+                    Embedding theorems, trace inequalities, and applications in variational problems.
+                </p>
+            </div>
+            <div class="card-bg p-8 rounded-lg hover-scale" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-blue-600/20 w-12 h-12 rounded-full flex items-center justify-center mb-6">
+                    <i data-feather="trending-up" class="text-blue-400"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Calculus of Variations</h3>
+                <p class="text-slate-300">
+                    Direct methods, Γ-convergence, and applications in material science and physics.
+                </p>
+            </div>
+            <div class="card-bg p-8 rounded-lg hover-scale" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-blue-600/20 w-12 h-12 rounded-full flex items-center justify-center mb-6">
+                    <i data-feather="compass" class="text-blue-400"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Geometric Measure Theory</h3>
+                <p class="text-slate-300">
+                    Rectifiable sets, currents, and applications in minimal surfaces and PDEs.
+                </p>
+            </div>
+            <div class="card-bg p-8 rounded-lg hover-scale" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-blue-600/20 w-12 h-12 rounded-full flex items-center justify-center mb-6">
+                    <i data-feather="wave" class="text-blue-400"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Fourier Analysis</h3>
+                <p class="text-slate-300">
+                    Harmonic analysis, pseudodifferential operators, and applications in signal processing.
+                </p>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <div class="footer">
-    &copy; 2025 Himanshu Hani
-  </div>
-</body>
+    <!-- Research Experience -->
+    <section id="experience" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto border-t border-slate-800">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4" data-aos="fade-up">Research Experience</h2>
+            <div class="w-20 h-1 bg-blue-500 mx-auto mb-8" data-aos="fade-up"></div>
+        </div>
+        <div class="space-y-12">
+            <div class="card-bg p-8 rounded-lg" data-aos="fade-up">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                    <h3 class="text-2xl font-bold">Research Intern</h3>
+                    <span class="text-blue-400 font-medium">Summer 2025</span>
+                </div>
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                    <h4 class="text-xl">TIFR CAM, Bangalore</h4>
+                    <span class="text-slate-400">Supervisor: Dr. Debabrata Karmakar</span>
+                </div>
+                <p class="text-slate-300 mb-4">
+                    Investigated Sobolev spaces and their applications in geometric measure theory. Developed variational methods for nonlinear PDEs with non-standard growth conditions.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-slate-800 px-3 py-1 rounded-full text-sm">Sobolev Spaces</span>
+                    <span class="bg-slate-800 px-3 py-1 rounded-full text-sm">Geometric Measure Theory</span>
+                    <span class="bg-slate-800 px-3 py-1 rounded-full text-sm">Variational Methods</span>
+                </div>
+            </div>
+            <div class="card-bg p-8 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                    <h3 class="text-2xl font-bold">Remote Research Intern</h3>
+                    <span class="text-blue-400 font-medium">Summer 2025</span>
+                </div>
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                    <h4 class="text-xl">France (Remote)</h4>
+                    <span class="text-slate-400">Mentor: Dr. Cosmin Burtea</span>
+                </div>
+                <p class="text-slate-300 mb-4">
+                    Studied nonlinear PDEs, particularly Hamilton-Jacobi equations and conservation laws. Analyzed viscosity solutions and their regularity properties in various function spaces.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-slate-800 px-3 py-1 rounded-full text-sm">Nonlinear PDEs</span>
+                    <span class="bg-slate-800 px-3 py-1 rounded-full text-sm">Hamilton-Jacobi</span>
+                    <span class="bg-slate-800 px-3 py-1 rounded-full text-sm">Conservation Laws</span>
+                </div>
+            </div>
+            <div class="card-bg p-8 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                    <h3 class="text-2xl font-bold">Research Intern</h3>
+                    <span class="text-blue-400 font-medium">Summer 2024</span>
+                </div>
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                    <h4 class="text-xl">IISER Mohali</h4>
+                    <span class="text-slate-400">Mentor: Dr. Debajyoti Chaudhuri</span>
+                </div>
+                <p class="text-slate-300 mb-4">
+                    Explored fundamental concepts in functional analysis with applications to quantum mechanics. Focused on spectral theory of unbounded operators and their physical interpretations.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-slate-800 px-3 py-1 rounded-full text-sm">Functional Analysis</span>
+                    <span class="bg-slate-800 px-3 py-1 rounded-full text-sm">Spectral Theory</span>
+                    <span class="bg-slate-800 px-3 py-1 rounded-full text-sm">Quantum Mechanics</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</html>
-
+    <!-- Skills & Coursework -->
+    <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-slate-900/50 border-t border-slate-800">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4" data-aos="fade-up">Skills & Coursework</h2>
+            <div class="w-20 h-1 bg-blue-500 mx-auto mb-8" data-aos="fade-up"></div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12">
+            <div data-aos="fade-right">
+                <h3 class="text-2xl font-bold mb-6">Core Mathematics</h3>
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                        <span class="text-slate-300">Real & Complex Analysis</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                        <span class="text-slate-300">Ordinary & Partial Differential Equations</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                        <span class="text-slate-300">Functional Analysis</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                        <span class="text-slate-300">Measure Theory & Integration</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                        <span class="text-slate-300">Algebra (Groups, Rings, Fields)</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                        <span class="text-slate-300">Topology & Differential Geometry</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                        <span class="text-slate-300">Fourier Analysis</span>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-left">
+                <h3 class="text-2xl font-bold mb-6">Technical Skills</h3>
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="font-bold mb-2 flex items-center">
